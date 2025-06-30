@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mahadi Hasan – Portfolio</title>
-    <!-- Tailwind CSS CDN -->
+    <script src="https://kit.fontawesome.com/a1725e5cd6.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -25,17 +25,33 @@
         .progress-bar {
             width: 0%;
         }
+
+        .blinking-cursor {
+            animation: blink 1s step-start infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
     </style>
+
 </head>
 
 <body class="bg-gradient-to-b_from-[#1c1c3c]_to-[#0f0f1d] bg-[#1D0C06] text-white font-sans">
     <!-- Navbar -->
-    <nav class="flex justify-between items-center px-20 py-4 shadow bg-[#1D0C06] sticky top-0 z-40">
-        <h1>
-            <span class="text-base bg-orange-600 font-semibold rounded-full p-1">MH</span>
+    <nav class="flex justify-between items-center px-20 py-4 shadow bg-[#1D0C06] sticky top-0 z-40 w-full">
+        <h1 class="">
+            <span
+                class="w-8 h-8 text- inline-flex items-center justify-center text-base bg-orange-600 font-semibold rounded-full p-1">MH</span>
             <span>Mahadi</span><span class="text-[#d15906]">Hasan</span>
         </h1>
-        <ul class="hidden md:flex gap-6 text-sm">
+        <ul class="flex items-center justify-between gap-6 text-base w-2/5">
             <li><a href="#about">About me</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#services">Service</a></li>
@@ -49,19 +65,25 @@
     <!-- Hero Section -->
     <section class="text-center px-6 md:px-20 py-12 relative">
         <div class="mx-auto flex flex-col lg:flex-row items-center justify-between max-w-7xl">
-
-            <!-- Text Section -->
             <div class="text-left w-full lg:w-1/2">
-                <h2 class="text-5xl font-bold mb-3">Hello,</h2>
-                <h3 class="text-4xl font-bold text-[#d15906] mb-4">I'm Mahadi Hasan</h3>
+                <h2 class="mb-2 leading-snug">
+                    <span class="text-5xl font-bold text-white">
+                        <span id="typed-hello"></span><span id="cursor-hello" class="blinking-cursor">|</span>
+                    </span>
+                    <br>
+                    <span class="text-4xl font-bold text-[#d15906]">
+                        <span id="typed-name"></span><span id="cursor-name" class="blinking-cursor hidden">|</span>
+                    </span>
+                </h2>
+
                 <p class="text-3xl font-bold text-gray-300 mb-3">Graphic Designer & UI/UX Designer</p>
-                <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                <p class="text-gray-400 text-base mb-6">
                     I'm a passionate designer with over 3 years of experience in graphic design and UI/UX.
                     Proficient in Adobe Photoshop, Illustrator, and Figma. I focus on building user-friendly
                     interfaces and bold visuals.
                 </p>
                 <a href="#contact"
-                    class="bg-orange-500 px-6 py-2 text-white rounded-l-xl rounded-b-xl font-semibold hover:bg-orange-600 transition">
+                    class="bg-orange-500 px-8 py-1 text-white rounded-l-xl rounded-b-xl font-semibold hover:bg-orange-600 transition">
                     Hire me
                 </a>
             </div>
@@ -89,22 +111,39 @@
     </section>
 
 
-<!-- About Me -->
-<section id="about" class="px-6 md:px-20 py-20 bg-[#0f0f1d] text-center text-white">
-  <h2 class="text-4xl font-bold mb-4">About <span class="text-orange-500">Me</span></h2>
-  <h3 class="text-orange-500 text-2xl font-medium mb-6">Graphic Designer & UI/UX Specialist</h3>
+    <!-- About Me -->
+    <section id="about" class="text-white px-20 py-20">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center">
 
-  <p class="max-w-3xl mx-auto text-gray-300 text-lg leading-relaxed">
-    I'm a passionate designer with over <span class="text-white font-semibold">3 years</span> of experience in graphic design and UI/UX. Skilled in Adobe Photoshop, Illustrator, and Figma — I specialize in crafting
-    user-friendly interfaces, strong visual identities, and clean design systems. My work blends creativity with functionality
-    to help brands stand out and engage their audiences effectively.
-  </p>
+            <div class="w-full lg:w-1/2 flex justify-start">
+                <div class="ms-10 w-80 h-80 rounded-full overflow-hidden border-4 border-orange-500 shadow-xl">
+                    <img src="assets/profile.png" alt="Mahadi Hasan" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2 text-center lg:text-left">
+                <h2 class="text-4xl font-bold mb-2">About <span class="text-orange-500">Me</span></h2>
+                <h3 class="text-2xl text-orange-400 font-medium mb-4">Graphic Designer & UI/UX Specialist</h3>
 
-  <!-- Optional Location or CTA -->
-  <p class="mt-6 text-sm text-gray-400">
-    📍 Based in <strong class="text-white">Jashore Sadar, Bangladesh</strong>
-  </p>
-</section>
+                <p class="text-gray-300 text-lg mb-4">
+                    I’m a passionate designer with over <span class="text-white font-semibold">3 years</span> of
+                    experience in
+                    graphic design and UI/UX. I craft stunning visual identities and intuitive user interfaces using
+                    tools like
+                    Adobe Photoshop, Illustrator, and Figma.
+                </p>
+                <p class="text-gray-400 text-base mb-4">
+                    I blend creative aesthetics with functionality to help brands connect and stand out in a digital
+                    world.
+                    Whether it’s a logo, website UI, or social media visuals — I aim to deliver impact-driven design
+                    solutions.
+                </p>
+
+                <p class="text-sm text-gray-400">
+                    📍 Based in <strong class="text-white">Jashore Sadar, Bangladesh</strong>
+                </p>
+            </div>
+        </div>
+    </section>
 
 
     <!--  Skills Section -->
@@ -234,321 +273,521 @@
         </div>
     </section>
 
-
     <!-- Services Section -->
-    <section id="services" class="px-6 md:px-20 py-16">
+    <section id="services" class="px-6 md:px-20 py-16 text-white">
         <h2 class="text-3xl font-bold text-center mb-12">My <span class="text-orange-500">Services</span></h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8">
+            <!-- YouTube Thumbnails -->
+            <div class="bg-white/5 rounded-xl p-4 border border-white/10 backdrop-blur-md hover:shadow-lg transition">
+                <img src="assets/services/YouTube_Thumbnails.jpg" alt="YouTube Thumbnails"
+                    class="rounded-lg mb-4 w-full h-48">
+                <h3 class="text-xl font-semibold mb-1">YouTube Thumbnails</h3>
+                <p class="text-sm text-gray-300 mb-2">High-CTR thumbnails tailored for content creators.</p>
+                <p class="text-xs text-gray-400">Tools: Photoshop, Canva</p>
+            </div>
 
-            <!-- Service Card -->
-            <div
-                class="backdrop-blur-md bg-white/10 border border-white/20 rounded-xl shadow-lg p-4 hover:scale-105 transition">
-                <img src="assets/services/Logo Design.png" class="rounded-lg w-full mb-4" alt="Logo Design">
-                <div class="text-center text-xl font-medium text-white">Logo Design</div>
-                <div class="flex justify-center mt-2 text-orange-400">
-                    <!-- 4.5 Stars -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.931 1.46 8.259L12 18.896l-7.396 4.6 1.46-8.259L0 9.306l8.332-1.151z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.931 1.46 8.259L12 18.896l-7.396 4.6 1.46-8.259L0 9.306l8.332-1.151z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.931 1.46 8.259L12 18.896l-7.396 4.6 1.46-8.259L0 9.306l8.332-1.151z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.931 1.46 8.259L12 18.896l-7.396 4.6 1.46-8.259L0 9.306l8.332-1.151z" />
-                    </svg>
-                    <!-- Half Star -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path d="M12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6l1.7 4.13 4.38.38-3.32 2.88 1 4.28z"
-                            fill="#F97316" />
-                        <path d="M12 6v9.4l3.76 2.27-1-4.28 3.32-2.88-4.38-.38L12 6z" fill=\"#c2410c\" />
-                    </svg>
+            <!-- Social Media Post Design -->
+            <div class="bg-white/5 rounded-xl p-4 border border-white/10 backdrop-blur-md hover:shadow-lg transition">
+                <img src="assets/services/social_media_post design.jpg" alt="Social Media Post Design"
+                    class="rounded-lg mb-4 w-full h-48">
+                <h3 class="text-xl font-semibold mb-1">Social Media Post Design</h3>
+                <p class="text-sm text-gray-300 mb-2">Engaging posts to boost your brand's online presence.</p>
+                <p class="text-xs text-gray-400">Tools: Photoshop, Illustrator</p>
+            </div>
+
+            <!-- Banner Design -->
+            <div class="bg-white/5 rounded-xl p-4 border border-white/10 backdrop-blur-md hover:shadow-lg transition">
+                <img src="assets/services/Banner_Design.jpg" alt="Banner Design" class="rounded-lg mb-4 w-full h-48">
+                <h3 class="text-xl font-semibold mb-1">Banner Design</h3>
+                <p class="text-sm text-gray-300 mb-2">Attractive banners for digital and print campaigns.</p>
+                <p class="text-xs text-gray-400">Tools: Illustrator, Photoshop</p>
+            </div>
+
+            <!-- Logo Design -->
+            <div class="bg-white/5 rounded-xl p-4 border border-white/10 backdrop-blur-md hover:shadow-lg transition">
+                <img src="assets/services/Logo_Design.png" alt="Logo Design" class="rounded-lg mb-4 w-full h-48">
+                <h3 class="text-xl font-semibold mb-1">Logo Design</h3>
+                <p class="text-sm text-gray-300 mb-2">Unique logos that establish brand identity.</p>
+                <p class="text-xs text-gray-400">Tools: Illustrator, Figma</p>
+            </div>
+
+            <!-- T-Shirt Design -->
+            <div class="bg-white/5 rounded-xl p-4 border border-white/10 backdrop-blur-md hover:shadow-lg transition">
+                <img src="assets/services/T-Shirt_Design.jpg" alt="T-Shirt Design" class="rounded-lg mb-4 w-full h-48">
+                <h3 class="text-xl font-semibold mb-1">T-Shirt Design</h3>
+                <p class="text-sm text-gray-300 mb-2">Trendy prints for casual and brand wear.</p>
+                <p class="text-xs text-gray-400">Tools: Illustrator, Photoshop</p>
+            </div>
+
+            <!-- Business Card Design -->
+            <div class="bg-white/5 rounded-xl p-4 border border-white/10 backdrop-blur-md hover:shadow-lg transition">
+                <img src="assets/services/Business_Card Design.png" alt="Business Card Design"
+                    class="rounded-lg mb-4 w-full h-48">
+                <h3 class="text-xl font-semibold mb-1">Business Card Design</h3>
+                <p class="text-sm text-gray-300 mb-2">Professional cards that make a lasting impression.</p>
+                <p class="text-xs text-gray-400">Tools: Illustrator, InDesign</p>
+            </div>
+
+            <!-- Brochure Design -->
+            <div class="bg-white/5 rounded-xl p-4 border border-white/10 backdrop-blur-md hover:shadow-lg transition">
+                <img src="assets/services/Brochure_Design.jpg" alt="Brochure Design"
+                    class="rounded-lg mb-4 w-full h-48">
+                <h3 class="text-xl font-semibold mb-1">Brochure Design</h3>
+                <p class="text-sm text-gray-300 mb-2">Creative layouts for business and product brochures.</p>
+                <p class="text-xs text-gray-400">Tools: InDesign, Photoshop</p>
+            </div>
+
+            <!-- Movie Poster Design -->
+            <div class="bg-white/5 rounded-xl p-4 border border-white/10 backdrop-blur-md hover:shadow-lg transition">
+                <img src="assets/services/Movie_Poster_Design.jpg" alt="Movie Poster Design"
+                    class="rounded-lg mb-4 w-full h-48">
+                <h3 class="text-xl font-semibold mb-1">Movie Poster Design</h3>
+                <p class="text-sm text-gray-300 mb-2">Stunning posters for films and shows.</p>
+                <p class="text-xs text-gray-400">Tools: Photoshop, Illustrator</p>
+            </div>
+
+            <!-- Website Design -->
+            <div class="bg-white/5 rounded-xl p-4 border border-white/10 backdrop-blur-md hover:shadow-lg transition">
+                <img src="assets/services/Website_Design.png" alt="Website Design" class="rounded-lg mb-4 w-full h-48">
+                <h3 class="text-xl font-semibold mb-1">Website Design</h3>
+                <p class="text-sm text-gray-300 mb-2">Modern and responsive web design concepts.</p>
+                <p class="text-xs text-gray-400">Tools: Figma, HTML/CSS</p>
+            </div>
+
+            <!-- App UI/UX Design -->
+            <div class="bg-white/5 rounded-xl p-4 border border-white/10 backdrop-blur-md hover:shadow-lg transition">
+                <img src="assets/services/APPS_Design.png" alt="App UI Design" class="rounded-lg mb-4 w-full h-48">
+                <h3 class="text-xl font-semibold mb-1">App UI Design</h3>
+                <p class="text-sm text-gray-300 mb-2">Mobile app interfaces with smooth UX.</p>
+                <p class="text-xs text-gray-400">Tools: Figma, Sketch</p>
+            </div>
+
+            <!-- Product Design -->
+            <div class="bg-white/5 rounded-xl p-4 border border-white/10 backdrop-blur-md hover:shadow-lg transition">
+                <img src="assets/services/Product_Design.png" alt="Product Design" class="rounded-lg mb-4 w-full h-48">
+                <h3 class="text-xl font-semibold mb-1">Product Design</h3>
+                <p class="text-sm text-gray-300 mb-2">Functional and aesthetic product presentations.</p>
+                <p class="text-xs text-gray-400">Tools: Blender, Figma, Photoshop</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="px-6 md:px-20 py-16 text-white">
+        <h2 class="text-3xl font-bold text-center mb-12">
+            My <span class="text-orange-500">Projects</span>
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- YouTube Thumbnails -->
+            <div class="bg-white/5 rounded-xl overflow-hidden hover:shadow-xl transition group">
+                <img src="assets/projects/YouTube Thumbnails.jpg" alt="YouTube Thumbnails"
+                    class="w-full h-48 object-cover" />
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-1">YouTube Thumbnails</h3>
+                    <p class="text-sm text-gray-300 mb-2">
+                        Custom branded thumbnails to increase video views.
+                    </p>
+                    <p class="text-xs text-gray-400 mb-2">Tools: Photoshop</p>
+                    <a href="https://yourportfolio.com/yt-thumbnails" class="text-sm text-orange-400 hover:underline">
+                        View Pack →
+                    </a>
                 </div>
             </div>
 
-            <!-- Repeat for other cards -->
-            <div
-                class="backdrop-blur-md bg-white/10 border border-white/20 rounded-xl shadow-lg p-4 hover:scale-105 transition">
-                <img src="assets/services/Banner Design.jpg" class="rounded-lg w-full mb-4" alt="Banner Design">
-                <div class="text-center text-xl font-medium text-white">Banner Design</div>
-                <div class="flex justify-center mt-2 text-orange-400">
-                    <!-- 5 Stars -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.931 1.46 8.259L12 18.896l-7.396 4.6 1.46-8.259L0 9.306l8.332-1.151z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.931 1.46 8.259L12 18.896l-7.396 4.6 1.46-8.259L0 9.306l8.332-1.151z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.931 1.46 8.259L12 18.896l-7.396 4.6 1.46-8.259L0 9.306l8.332-1.151z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.931 1.46 8.259L12 18.896l-7.396 4.6 1.46-8.259L0 9.306l8.332-1.151z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.931 1.46 8.259L12 18.896l-7.396 4.6 1.46-8.259L0 9.306l8.332-1.151z" />
-                    </svg>
-                </div>
-            </div>
-            <div
-                class="backdrop-blur-md bg-white/10 border border-white/20 rounded-xl shadow-lg p-4 hover:scale-105 transition">
-                <img src="assets/services/Banner Design.jpg" class="rounded-lg w-full mb-4" alt="Banner Design">
-                <div class="text-center text-xl font-medium text-white">Banner Design</div>
-                <div class="flex justify-center mt-2 text-orange-400">
-                    <!-- 5 Stars -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.931 1.46 8.259L12 18.896l-7.396 4.6 1.46-8.259L0 9.306l8.332-1.151z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.931 1.46 8.259L12 18.896l-7.396 4.6 1.46-8.259L0 9.306l8.332-1.151z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.931 1.46 8.259L12 18.896l-7.396 4.6 1.46-8.259L0 9.306l8.332-1.151z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.931 1.46 8.259L12 18.896l-7.396 4.6 1.46-8.259L0 9.306l8.332-1.151z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.931 1.46 8.259L12 18.896l-7.396 4.6 1.46-8.259L0 9.306l8.332-1.151z" />
-                    </svg>
-                </div>
-            </div>
-            <div
-                class="backdrop-blur-md bg-white/10 border border-white/20 rounded-xl shadow-lg p-4 hover:scale-105 transition">
-                <img src="assets/services/Banner Design.jpg" class="rounded-lg w-full mb-4" alt="Banner Design">
-                <div class="text-center text-xl font-medium text-white">Banner Design</div>
-                <div class="flex justify-center mt-2 text-orange-400">
-                    <!-- 5 Stars -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.931 1.46 8.259L12 18.896l-7.396 4.6 1.46-8.259L0 9.306l8.332-1.151z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.931 1.46 8.259L12 18.896l-7.396 4.6 1.46-8.259L0 9.306l8.332-1.151z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.931 1.46 8.259L12 18.896l-7.396 4.6 1.46-8.259L0 9.306l8.332-1.151z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.931 1.46 8.259L12 18.896l-7.396 4.6 1.46-8.259L0 9.306l8.332-1.151z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.931 1.46 8.259L12 18.896l-7.396 4.6 1.46-8.259L0 9.306l8.332-1.151z" />
-                    </svg>
+            <!-- Flyer Design -->
+            <div class="bg-white/5 rounded-xl overflow-hidden hover:shadow-xl transition group">
+                <img src="assets/projects/Flyer Design.jpg" alt="Flyer Design" class="w-full h-48 object-cover" />
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-1">Flyer Design</h3>
+                    <p class="text-sm text-gray-300 mb-2">
+                        Eye-catching flyers for events and promotions.
+                    </p>
+                    <p class="text-xs text-gray-400 mb-2">Tools: Illustrator, Photoshop</p>
+                    <a href="https://yourportfolio.com/flyer-design" class="text-sm text-orange-400 hover:underline">
+                        View Samples →
+                    </a>
                 </div>
             </div>
 
-            <!-- Add similar cards for Flyer Design & Social Media Post Design -->
+            <!-- Social Media Post Design -->
+            <div class="bg-white/5 rounded-xl overflow-hidden hover:shadow-xl transition group">
+                <img src="assets/projects/Social Media Post Design.jpg" alt="Social Media Post Design"
+                    class="w-full h-48 object-cover" />
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-1">Social Media Post Design</h3>
+                    <p class="text-sm text-gray-300 mb-2">
+                        Engaging posts designed for Instagram, Facebook, and more.
+                    </p>
+                    <p class="text-xs text-gray-400 mb-2">Tools: Figma, Photoshop</p>
+                    <a href="https://yourportfolio.com/social-media-posts"
+                        class="text-sm text-orange-400 hover:underline">
+                        View Posts →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Banner Design -->
+            <div class="bg-white/5 rounded-xl overflow-hidden hover:shadow-xl transition group">
+                <img src="assets/projects/Banner Design.jpg" alt="Banner Design" class="w-full h-48 object-cover" />
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-1">Banner Design</h3>
+                    <p class="text-sm text-gray-300 mb-2">
+                        Web and print banners crafted for maximum impact.
+                    </p>
+                    <p class="text-xs text-gray-400 mb-2">Tools: Illustrator, Photoshop</p>
+                    <a href="https://yourportfolio.com/banner-design" class="text-sm text-orange-400 hover:underline">
+                        View Banners →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Brochure Design -->
+            <div class="bg-white/5 rounded-xl overflow-hidden hover:shadow-xl transition group">
+                <img src="assets/projects/Brochure Design.jpg" alt="Brochure Design" class="w-full h-48 object-cover" />
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-1">Brochure Design</h3>
+                    <p class="text-sm text-gray-300 mb-2">
+                        Professional brochures for corporate & product branding.
+                    </p>
+                    <p class="text-xs text-gray-400 mb-2">Tools: InDesign, Illustrator</p>
+                    <a href="https://yourportfolio.com/brochure-design" class="text-sm text-orange-400 hover:underline">
+                        View Brochures →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Movie Poster Design -->
+            <div class="bg-white/5 rounded-xl overflow-hidden hover:shadow-xl transition group">
+                <img src="assets/projects/Movie Poster Design.jpg" alt="Movie Poster Design"
+                    class="w-full h-48 object-cover" />
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-1">Movie Poster Design</h3>
+                    <p class="text-sm text-gray-300 mb-2">
+                        Promotional posters for films and events.
+                    </p>
+                    <p class="text-xs text-gray-400 mb-2">Tools: Photoshop</p>
+                    <a href="https://yourportfolio.com/movie-poster" class="text-sm text-orange-400 hover:underline">
+                        View Posters →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Website Design -->
+            <div class="bg-white/5 rounded-xl overflow-hidden hover:shadow-xl transition group">
+                <img src="assets/projects/Website Design.png" alt="Website Design" class="w-full h-48 object-cover" />
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-1">Website Design</h3>
+                    <p class="text-sm text-gray-300 mb-2">
+                        Responsive and user-friendly website UI/UX designs.
+                    </p>
+                    <p class="text-xs text-gray-400 mb-2">Tools: Figma, HTML/CSS</p>
+                    <a href="https://yourportfolio.com/website-design" class="text-sm text-orange-400 hover:underline">
+                        View Website →
+                    </a>
+                </div>
+            </div>
+
+            <!-- APPS Design -->
+            <div class="bg-white/5 rounded-xl overflow-hidden hover:shadow-xl transition group">
+                <img src="assets/projects/Apps Design.png" alt="Apps Design" class="w-full h-48 object-cover" />
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-1">APPS Design</h3>
+                    <p class="text-sm text-gray-300 mb-2">
+                        UI/UX designs for mobile and web applications.
+                    </p>
+                    <p class="text-xs text-gray-400 mb-2">Tools: Figma, Sketch</p>
+                    <a href="https://yourportfolio.com/apps-design" class="text-sm text-orange-400 hover:underline">
+                        View Apps →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product Design -->
+            <div class="bg-white/5 rounded-xl overflow-hidden hover:shadow-xl transition group">
+                <img src="assets/projects/Product Design.png" alt="Product Design" class="w-full h-48 object-cover" />
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-1">Product Design</h3>
+                    <p class="text-sm text-gray-300 mb-2">
+                        Conceptual and visual designs for product packaging and branding.
+                    </p>
+                    <p class="text-xs text-gray-400 mb-2">Tools: Illustrator, Photoshop</p>
+                    <a href="https://yourportfolio.com/product-design" class="text-sm text-orange-400 hover:underline">
+                        View Designs →
+                    </a>
+                </div>
+            </div>
 
         </div>
     </section>
 
 
-    <!-- Projects -->
-    <section id="projects" class="px-20 py-16 bg-[#0f0f1d]">
-        <h2 class="text-3xl font-bold text-center mb-12">My <span class="text-orange-500">Projects</span></h2>
+    <section id="reviews" class="px-6 md:px-20 py-16 text-white">
+        <h2 class="text-3xl font-bold text-center mb-12">
+            What <span class="text-orange-500">Clients Say</span>
+        </h2>
 
-        <div class="grid grid-cols-[repeat(auto-fit,minmax(270px,1fr))] gap-8">
-
-            <!-- Project Card -->
-            <div
-                class="rounded-xl overflow-hidden shadow-lg bg-white/10 backdrop-blur-md border border-white/20 transition-transform hover:scale-105">
-                <img src="assets/services/Logo Design.png" alt="Project 1" class="w-full h-48 object-cover">
-                <div class="p-4 text-white">
-                    <h3 class="text-xl font-semibold mb-1">Landing Page UI</h3>
-                    <p class="text-sm text-gray-300 mb-2">Modern landing page design using Figma. Focused on clean
-                        layout and usability.</p>
-                    <a href="#" class="text-orange-400 hover:underline text-sm">View Project →</a>
-                </div>
-            </div>
-
-            <!-- Project Card -->
-            <div
-                class="rounded-xl overflow-hidden shadow-lg bg-white/10 backdrop-blur-md border border-white/20 transition-transform hover:scale-105">
-                <img src="assets/services/Logo Design.png" alt="Project 2" class="w-full h-48 object-cover">
-                <div class="p-4 text-white">
-                    <h3 class="text-xl font-semibold mb-1">E-commerce Banner</h3>
-                    <p class="text-sm text-gray-300 mb-2">Eye-catching banner design for online stores, optimized for
-                        conversions.</p>
-                    <a href="#" class="text-orange-400 hover:underline text-sm">View Project →</a>
-                </div>
-            </div>
-
-            <!-- Project Card -->
-            <div
-                class="rounded-xl overflow-hidden shadow-lg bg-white/10 backdrop-blur-md border border-white/20 transition-transform hover:scale-105">
-                <img src="assets/services/Logo Design.png" alt="Project 3" class="w-full h-48 object-cover">
-                <div class="p-4 text-white">
-                    <h3 class="text-xl font-semibold mb-1">Business Flyer</h3>
-                    <p class="text-sm text-gray-300 mb-2">Corporate flyer design for promoting business services with
-                        professional style.</p>
-                    <a href="#" class="text-orange-400 hover:underline text-sm">View Project →</a>
-                </div>
-            </div>
-
-            <!-- Add more projects if needed -->
-
-        </div>
-    </section>
-    <!-- Reviews Section -->
-    <section id="reviews" class="px-6 md:px-20 py-16 bg-[#0f0f1d] text-white">
-        <h2 class="text-3xl font-bold text-center mb-12">What <span class="text-orange-500">Clients Say</span></h2>
-
-        <div class="grid grid-cols-[repeat(auto-fit,minmax(270px,1fr))] gap-8">
+        <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-10">
 
             <!-- Review Card -->
-            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-lg p-6">
-                <div class="flex items-center gap-3 mb-4">
-                    <img src="https://randomuser.me/api/portraits/men/75.jpg"
-                        class="w-10 h-10 rounded-full object-cover" alt="Lukas">
+            <div
+                class="bg-gradient-to-br from-[#1e1e2f] to-[#252533] rounded-2xl px-6 py-6 shadow-lg hover:shadow-orange-600/50 transition-shadow duration-300">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="flex justify-center items-center flex-col">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg"
+                            class="w-10 h-10 rounded-full object-cover" alt="Lukas" />
+                        <div class="flex justify-center mt-2 text-orange-400">
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star"></i>
+                        </div>
+                    </div>
                     <div>
                         <h3 class="font-semibold text-lg">Lukas Schmidt</h3>
+                        <p class="text-sm text-orange-400 italic">Brand Manager</p>
                         <div class="text-sm text-gray-400 flex items-center gap-1">
-                            <img src="https://flagcdn.com/w20/de.png" class="w-5 h-3" alt="Germany"> Germany
+                            <img src="https://flagcdn.com/w20/de.png" class="w-5 h-3" alt="Germany" /> Germany
                         </div>
                     </div>
                 </div>
-                <p class="text-gray-300 text-sm mb-2">“Great communication, clean and creative logo design. Will
-                    definitely work again!”</p>
-                <!-- Star Rating -->
-                <div class="flex text-orange-400 text-sm">
-                    ⭐⭐⭐⭐⭐
-                </div>
+                <p class="text-gray-300 text-sm mb-2 border-l-2 border-orange-500 pl-2">
+                    Great communication, clean and creative logo design. Will definitely work again!
+                </p>
             </div>
 
             <!-- Review Card -->
-            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-lg p-6">
-                <div class="flex items-center gap-3 mb-4">
-                    <img src="https://randomuser.me/api/portraits/women/65.jpg"
-                        class="w-10 h-10 rounded-full object-cover" alt="Élodie">
+            <div
+                class="bg-gradient-to-br from-[#1e1e2f] to-[#252533] rounded-2xl px-6 py-6 shadow-lg hover:shadow-orange-600/50 transition-shadow duration-300">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="flex justify-center items-center flex-col">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg"
+                            class="w-10 h-10 rounded-full object-cover" alt="Élodie" />
+                        <div class="flex justify-center mt-2 text-orange-400">
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star"></i>
+                        </div>
+                    </div>
                     <div>
                         <h3 class="font-semibold text-lg">Élodie Martin</h3>
+                        <p class="text-sm text-orange-400 italic">Marketing Director</p>
                         <div class="text-sm text-gray-400 flex items-center gap-1">
-                            <img src="https://flagcdn.com/w20/fr.png" class="w-5 h-3" alt="France"> France
+                            <img src="https://flagcdn.com/w20/fr.png" class="w-5 h-3" alt="France" /> France
                         </div>
                     </div>
                 </div>
-                <p class="text-gray-300 text-sm mb-2">“Professional banner work! Delivered quickly and perfectly matched
-                    our brand.”</p>
-                <div class="flex text-orange-400 text-sm">
-                    ⭐⭐⭐⭐⭐
-                </div>
+                <p class="text-gray-300 text-sm mb-2 border-l-2 border-orange-500 pl-2">
+                    Professional banner work! Delivered quickly and perfectly matched our brand.
+                </p>
             </div>
 
             <!-- Review Card -->
-            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-lg p-6">
-                <div class="flex items-center gap-3 mb-4">
-                    <img src="https://randomuser.me/api/portraits/men/45.jpg"
-                        class="w-10 h-10 rounded-full object-cover" alt="Matteo">
+            <div
+                class="bg-gradient-to-br from-[#1e1e2f] to-[#252533] rounded-2xl px-6 py-6 shadow-lg hover:shadow-orange-600/50 transition-shadow duration-300">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="flex justify-center items-center flex-col">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg"
+                            class="w-10 h-10 rounded-full object-cover" alt="Matteo" />
+                        <div class="flex justify-center mt-2 text-orange-400">
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star"></i>
+                        </div>
+                    </div>
                     <div>
                         <h3 class="font-semibold text-lg">Matteo Rossi</h3>
+                        <p class="text-sm text-orange-400 italic">Event Organizer</p>
                         <div class="text-sm text-gray-400 flex items-center gap-1">
-                            <img src="https://flagcdn.com/w20/it.png" class="w-5 h-3" alt="Italy"> Italy
+                            <img src="https://flagcdn.com/w20/it.png" class="w-5 h-3" alt="Italy" /> Italy
                         </div>
                     </div>
                 </div>
-                <p class="text-gray-300 text-sm mb-2">“Very talented designer. The flyer exceeded our expectations.
-                    Highly recommended.”</p>
-                <div class="flex text-orange-400 text-sm">
-                    ⭐⭐⭐⭐½
-                </div>
+                <p class="text-gray-300 text-sm mb-2 border-l-2 border-orange-500 pl-2">
+                    Very talented designer. The flyer exceeded our expectations. Highly recommended.
+                </p>
             </div>
 
             <!-- Review Card -->
-            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-lg p-6">
-                <div class="flex items-center gap-3 mb-4">
-                    <img src="https://randomuser.me/api/portraits/women/35.jpg"
-                        class="w-10 h-10 rounded-full object-cover" alt="Sophie">
+            <div
+                class="bg-gradient-to-br from-[#1e1e2f] to-[#252533] rounded-2xl px-6 py-6 shadow-lg hover:shadow-orange-600/50 transition-shadow duration-300">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="flex justify-center items-center flex-col">
+                        <img src="https://randomuser.me/api/portraits/women/35.jpg"
+                            class="w-10 h-10 rounded-full object-cover" alt="Sophie" />
+                        <div class="flex justify-center mt-2 text-orange-400">
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star-half"></i>
+                        </div>
+                    </div>
                     <div>
                         <h3 class="font-semibold text-lg">Sophie de Vries</h3>
+                        <p class="text-sm text-orange-400 italic">Social Media Manager</p>
                         <div class="text-sm text-gray-400 flex items-center gap-1">
-                            <img src="https://flagcdn.com/w20/nl.png" class="w-5 h-3" alt="Netherlands"> Netherlands
+                            <img src="https://flagcdn.com/w20/nl.png" class="w-5 h-3" alt="Netherlands" /> Netherlands
                         </div>
                     </div>
                 </div>
-                <p class="text-gray-300 text-sm mb-2">“The social media post design was modern and stylish. Will hire
-                    again!”</p>
-                <div class="flex text-orange-400 text-sm">
-                    ⭐⭐⭐⭐⭐
+                <p class="text-gray-300 text-sm mb-2 border-l-2 border-orange-500 pl-2">
+                    The social media post design was modern and stylish. Will hire again!
+                </p>
+            </div>
+
+            <!-- Review Card -->
+            <div
+                class="bg-gradient-to-br from-[#1e1e2f] to-[#252533] rounded-2xl px-6 py-6 shadow-lg hover:shadow-orange-600/50 transition-shadow duration-300">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="flex justify-center items-center flex-col">
+                        <img src="https://randomuser.me/api/portraits/men/88.jpg"
+                            class="w-10 h-10 rounded-full object-cover" alt="Carlos" />
+                        <div class="flex justify-center mt-2 text-orange-400">
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Carlos Mendoza</h3>
+                        <p class="text-sm text-orange-400 italic">Product Designer</p>
+                        <div class="text-sm text-gray-400 flex items-center gap-1">
+                            <img src="https://flagcdn.com/w20/mx.png" class="w-5 h-3" alt="Mexico" /> Mexico
+                        </div>
+                    </div>
                 </div>
+                <p class="text-gray-300 text-sm mb-2 border-l-2 border-orange-500 pl-2">
+                    Exceptional product design that perfectly captured our brand’s essence.
+                </p>
+            </div>
+
+            <!-- Review Card -->
+            <div
+                class="bg-gradient-to-br from-[#1e1e2f] to-[#252533] rounded-2xl px-6 py-6 shadow-lg hover:shadow-orange-600/50 transition-shadow duration-300">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="flex justify-center items-center flex-col">
+                        <img src="https://randomuser.me/api/portraits/women/90.jpg"
+                            class="w-10 h-10 rounded-full object-cover" alt="Anya" />
+                        <div class="flex justify-center mt-2 text-orange-400">
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star"></i>
+                            <i class="text-xs fa-solid fa-star-half"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Anya Petrova</h3>
+                        <p class="text-sm text-orange-400 italic">UI/UX Specialist</p>
+                        <div class="text-sm text-gray-400 flex items-center gap-1">
+                            <img src="https://flagcdn.com/w20/ru.png" class="w-5 h-3" alt="Russia" /> Russia
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-300 text-sm mb-2 border-l-2 border-orange-500 pl-2">
+                    Amazing website UI design with attention to detail and usability.
+                </p>
             </div>
 
         </div>
     </section>
 
- <!-- Footer -->
-<footer class="bg-[#0f0f1d] px-6 md:px-20 py-12 text-sm text-gray-400">
-  <div class="max-w-7xl mx-auto grid gap-10 md:grid-cols-3">
 
-    <!-- Branding -->
+
+    <!-- Footer -->
+<footer class="bg-[#1D0C06] px-6 md:px-20 pt-16 pb-6 text-sm text-gray-400 font-sans">
+  <div class="max-w-7xl mx-auto grid gap-12 md:grid-cols-4">
+
+    <!-- Branding & Socials -->
     <div>
-      <h3 class="text-orange-500 text-2xl font-bold mb-2">MH</h3>
-      <p>Graphic Designer & UI/UX Specialist</p>
-
-      <!-- Social Links -->
-      <div class="flex gap-4 mt-4">
-        <a href="#" class="text-white hover:text-orange-500 transition" aria-label="Facebook">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M22 12.07C22 6.52 17.52 2 12 2S2 6.52 2 12.07C2 17.08 5.66 21.24 10.44 22v-7.03H7.9v-2.9h2.54V9.76c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.25c-1.23 0-1.61.77-1.61 1.56v1.88h2.74l-.44 2.9h-2.3V22C18.34 21.24 22 17.08 22 12.07z"/></svg>
+      <h3 class="text-orange-500 text-3xl font-extrabold mb-3 tracking-wide">MH</h3>
+      <p class="text-sm leading-relaxed max-w-xs">
+        Creative Graphic & UI/UX Designer with over <span class="font-semibold text-orange-500">3 years</span><br>
+        of experience in visual branding and digital design.
+      </p>
+      <div class="flex gap-5 mt-6">
+        <a href="#" aria-label="LinkedIn" class="transition-transform hover:scale-110" target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" class="w-6 h-6" alt="LinkedIn Icon" />
         </a>
-        <a href="#" class="text-white hover:text-orange-500 transition" aria-label="LinkedIn">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.09 8.03h4.82V24H.09V8.03zM8.36 8.03h4.63v2.18h.07c.65-1.23 2.23-2.53 4.59-2.53 4.91 0 5.82 3.23 5.82 7.42V24h-4.82v-6.97c0-1.66-.03-3.8-2.32-3.8-2.33 0-2.69 1.82-2.69 3.7V24H8.36V8.03z"/></svg>
+        <a href="#" aria-label="Facebook" class="transition-transform hover:scale-110" target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" class="w-6 h-6" alt="Facebook Icon" />
         </a>
-        <a href="#" class="text-white hover:text-orange-500 transition" aria-label="Behance">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M8.16 10.2c0-1.1-.78-1.2-1.4-1.2H4.58v2.4H6.7c.5 0 1.46-.08 1.46-1.2zM6.68 13.68H4.58v2.64h2.16c.72 0 1.56-.24 1.56-1.32 0-.9-.6-1.32-1.62-1.32zM22 11.6h-6.5c0-.56.5-1.44 1.72-1.44 1.14 0 1.6.74 1.72 1.12h2.9c-.14-1.82-1.56-3.46-4.7-3.46-3.12 0-4.78 2.28-4.78 4.8 0 2.62 1.78 4.72 4.72 4.72 1.4 0 3.88-.52 4.2-3.44H17.8c-.16.44-.56 1.18-1.9 1.18-1.4 0-1.9-.88-1.9-1.48H22V11.6zM2 4v16h20V4H2zm13 2h3v1h-3V6zM8.52 18H2V6h6.36c2.2 0 3.4.96 3.4 2.8 0 .72-.42 1.52-1.34 1.94v.06c1.26.3 1.9 1.28 1.9 2.52C12.32 16.64 10.92 18 8.52 18z"/></svg>
+        <a href="#" aria-label="Instagram" class="transition-transform hover:scale-110" target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" class="w-6 h-6" alt="Instagram Icon" />
         </a>
-        <a href="#" class="text-white hover:text-orange-500 transition" aria-label="Dribbble">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.004 0C5.375 0 0 5.375 0 12.004c0 6.63 5.375 12.005 12.004 12.005 6.63 0 12.005-5.375 12.005-12.005C24.009 5.375 18.634 0 12.004 0zm6.645 5.794a10.07 10.07 0 0 1 2.229 6.231c-.26-.054-3.058-.6-6.075-.276-.145-.349-.278-.666-.438-1.012 2.805-1.26 4.29-3.007 4.284-4.943zm-1.55-1.568c.497.487.919 1.03 1.28 1.61-.14.38-1.302 2.94-4.666 4.15a31.268 31.268 0 0 0-3.04-4.58c2.97-1.157 5.465-.943 6.426-1.18zM12.004 2.26a9.72 9.72 0 0 1 5.063 1.434c-.847.212-2.84.527-5.705 1.44a29.338 29.338 0 0 0-4.154-3.02A9.752 9.752 0 0 1 12.004 2.26zM6.408 3.74a27.22 27.22 0 0 1 4.043 2.95 28.999 28.999 0 0 0-7.506 2.27 9.753 9.753 0 0 1 3.463-5.22zM2.247 12.004c0-.2.005-.4.015-.598a26.498 26.498 0 0 1 7.867-2.451 28.398 28.398 0 0 1 1.3 2.228c-5.107 1.528-7.233 4.82-7.942 6.044a9.7 9.7 0 0 1-1.24-5.223zM12.004 21.75a9.7 9.7 0 0 1-6.302-2.27c.263-.96 1.944-4.83 7.45-6.346.577 1.333 1.078 2.743 1.497 4.226l-.002.001c1.65.282 3.256.648 4.801 1.088a9.753 9.753 0 0 1-7.444 3.3zm8.006-4.775c-1.338-.386-2.7-.716-4.062-.972a32.607 32.607 0 0 0-1.393-3.783c2.715-.25 5.264.218 5.607.283a9.67 9.67 0 0 1-.152 4.472z"/></svg>
+        <a href="#" aria-label="Behance" class="transition-transform hover:scale-110" target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn-icons-png.flaticon.com/512/145/145799.png" class="w-6 h-6" alt="Behance Icon" />
         </a>
       </div>
+      <a href="#" class="inline-block mt-6 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white text-xs font-semibold px-5 py-2 rounded-l-2xl rounded-b-2xl shadow-lg transition">
+        Download Resume
+      </a>
     </div>
 
     <!-- Quick Links -->
     <div>
-      <h4 class="font-semibold text-white mb-2">Quick Links</h4>
-      <ul class="space-y-1">
-        <li><a href="#about" class="hover:text-orange-500 transition">About</a></li>
-        <li><a href="#skills" class="hover:text-orange-500 transition">Skills</a></li>
-        <li><a href="#services" class="hover:text-orange-500 transition">Services</a></li>
-        <li><a href="#projects" class="hover:text-orange-500 transition">Projects</a></li>
-        <li><a href="#contact" class="hover:text-orange-500 transition">Contact</a></li>
+      <h4 class="text-orange-500 font-semibold mb-2 tracking-wide text-lg">Quick Links</h4>
+      <ul class="text-gray-300">
+        <li><a href="#home" class="hover:text-orange-500 transition-colors duration-300">Home</a></li>
+        <li><a href="#about" class="hover:text-orange-500 transition-colors duration-300">About</a></li>
+        <li><a href="#skills" class="hover:text-orange-500 transition-colors duration-300">Skills</a></li>
+        <li><a href="#services" class="hover:text-orange-500 transition-colors duration-300">Services</a></li>
+        <li><a href="#projects" class="hover:text-orange-500 transition-colors duration-300">Projects</a></li>
+        <li><a href="#contact" class="hover:text-orange-500 transition-colors duration-300">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Top Services -->
+    <div>
+      <h4 class="text-orange-500 font-semibold mb-2 tracking-wide text-lg">Top Services</h4>
+      <ul class="text-gray-300">
+        <li class="hover:text-orange-500 transition-colors cursor-default">YouTube Thumbnails</li>
+        <li class="hover:text-orange-500 transition-colors cursor-default">T-Shirt Design</li>
+        <li class="hover:text-orange-500 transition-colors cursor-default">Social Media Post</li>
+        <li class="hover:text-orange-500 transition-colors cursor-default">Website UI Design</li>
+        <li class="hover:text-orange-500 transition-colors cursor-default">Logo Design</li>
       </ul>
     </div>
 
     <!-- Contact Info -->
     <div>
-      <h4 class="font-semibold text-white mb-2">Contact</h4>
-      <p>Email: <a href="mailto:mahadihasan1215@gmail.com" class="hover:text-orange-500 transition">mahadihasan1215@gmail.com</a></p>
-      <p>Phone: <a href="tel:+8801521428229" class="hover:text-orange-500 transition">+8801521428229</a></p>
-      <p>Location: Jashore Sadar, Bangladesh</p>
+      <h4 class="text-orange-500 font-semibold mb-2 tracking-wide text-lg">Contact</h4>
+      <p class="text-gray-300">
+        Email: 
+        <a href="mailto:mahadihasan1215@gmail.com" class="hover:text-orange-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer">
+          mahadihasan1215@gmail.com
+        </a>
+      </p>
+      <p class="text-gray-300">
+        Phone: 
+        <a href="tel:+8801401862429" class="hover:text-orange-500 transition-colors duration-300">
+          +8801401862429
+        </a>
+      </p>
+      <p class="text-gray-300">
+        Location:<br />
+        <span>Jashore Sadar, Bangladesh</span>
+      </p>
     </div>
 
   </div>
 
-  <div class="text-center text-xs mt-8 text-gray-500 border-t border-white/10 pt-6">
-    &copy; 2025 Mahadi Hasan. All rights reserved.
+  <div class="text-center mt-10 text-gray-300 text-base border-t border-white/10 pt-6 select-none">
+    &copy; 2025 <span class="text-orange-500 font-semibold">Mahadi Hasan</span>. All rights reserved.
   </div>
 </footer>
+
+
 
     <!-- IntersectionObserver to animate progress bars on scroll -->
     <script>
@@ -563,6 +802,39 @@
         }, { threshold: 0.9 });
 
         document.querySelectorAll('.progress-bar').forEach(bar => observer.observe(bar));
+
+        const helloText = "Hello,";
+        const nameText = "I'm Mahadi Hasan ";
+
+        const helloTarget = document.getElementById("typed-hello");
+        const nameTarget = document.getElementById("typed-name");
+        const cursorHello = document.getElementById("cursor-hello");
+        const cursorName = document.getElementById("cursor-name");
+
+        let i = 0;
+        let j = 0;
+
+        function typeHello() {
+            if (i < helloText.length) {
+                helloTarget.textContent += helloText.charAt(i);
+                i++;
+                setTimeout(typeHello, 300);
+            } else {
+                cursorHello.classList.add("hidden");
+                cursorName.classList.remove("hidden");
+                setTimeout(typeName, 100);
+            }
+        }
+
+        function typeName() {
+            if (j < nameText.length) {
+                nameTarget.textContent += nameText.charAt(j);
+                j++;
+                setTimeout(typeName, 100);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", typeHello);
     </script>
 </body>
 
