@@ -34,7 +34,7 @@
     <style>
         /* Make sure progress bars are invisible until JS sets the width */
         .progress-bar {
-            width: 0%;
+            transition: width 1.2s ease-in-out;
         }
 
         .blinking-cursor {
@@ -140,7 +140,7 @@
     <!-- Navbar -->
     <nav class="bg-[#1D0C06] px-6 lg:px-16 py-4 sticky top-0 z-40 w-full"
         style="box-shadow: 0 12px 30px -8px rgba(255, 96, 22, 0.3);">
-        <div class="flex items-center justify-between">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
 
             <!-- Logo -->
             <h1 class="text-lg font-bold flex items-center gap-1">
@@ -195,7 +195,7 @@
 
     <!-- Hero Section -->
     <section class="text-center px-6 lg:px-16 py-16 relative bg-gradient-to-b from-[#1c1c3c] to-[#1D0C06]">
-        <div class="flex flex-col lg:flex-row items-center justify-between">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between">
 
             <!-- LEFT: Text Content -->
             <div class="text-left w-full lg:w-1/2">
@@ -308,117 +308,119 @@
 
     <!--  Skills Section -->
     <section id="skills" class="py-10 lg:py-20 px-6 lg:px-16">
-        <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold text-white tracking-tight">
-                <span class="text-orange-500">My</span> Skills
-            </h2>
-        </div>
-
-        <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            <!-- Skill Card (Repeatable) -->
-            <div
-                class="p-5 rounded-xl bg-gradient-to-br from-[#2e1a10] to-[#1a0e0e] shadow-md hover:shadow-orange-500/40 hover:scale-105 transition duration-300">
-                <div class="flex flex-col">
-                    <img src="assets/skills/photoshop-icon.png" alt="Photoshop" class="h-32 md:h-24 mb-4 mx-auto" />
-                    <div class="flex items-center justify-between">
-                        <h3 class="text-lg font-semibold">Photoshop</h3>
-                        <span class="text-sm text-gray-300">3+ Years</span>
-                    </div>
-                    <p class="mt-2 text-sm text-white/90">Photo editing, retouching, mockups, and visual designs.</p>
-                    <div class="w-full mt-4">
-                        <div class="h-2 rounded-full bg-white/10 overflow-hidden">
-                            <div class="progress-bar h-2 rounded-full bg-emerald-400" data-width="90%"></div>
+        <div class="max-w-7xl mx-auto ">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-white tracking-tight">
+                    <span class="text-orange-500">My</span> Skills
+                </h2>
+            </div>
+    
+            <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Skill Card (Repeatable) -->
+                <div
+                    class="p-5 rounded-xl bg-gradient-to-br from-[#2e1a10] to-[#1a0e0e] shadow-md hover:shadow-orange-500/40 hover:scale-105 transition duration-300">
+                    <div class="flex flex-col">
+                        <img src="assets/skills/photoshop-icon.png" alt="Photoshop" class="h-32 md:h-24 mb-4 mx-auto" />
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-semibold">Photoshop</h3>
+                            <span class="text-sm text-gray-300">3+ Years</span>
+                        </div>
+                        <p class="mt-2 text-sm text-white/90">Photo editing, retouching, mockups, and visual designs.</p>
+                        <div class="w-full mt-4">
+                            <div class="h-2 rounded-full bg-white/10 overflow-hidden">
+                                <div class="progress-bar h-2 rounded-full bg-emerald-400" data-width="90%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Illustrator -->
-            <div
-                class="p-5 rounded-xl bg-gradient-to-br from-[#2e1a10] to-[#1a0e0e] shadow-md hover:shadow-orange-500/40 hover:scale-105 transition duration-300">
-                <div class="flex flex-col">
-                    <img src="assets/skills/Illustrator_icon.png" alt="Illustrator" class="h-32 md:h-24 mb-4 mx-auto" />
-                    <div class="flex items-center justify-between">
-                        <h3 class="text-lg font-semibold">Illustrator</h3>
-                        <span class="text-sm text-gray-300">3+ Years</span>
-                    </div>
-                    <p class="mt-2 text-sm text-white/90">Logo design, icons, vector art, and illustrations.</p>
-                    <div class="w-full mt-4">
-                        <div class="h-2 rounded-full bg-white/10 overflow-hidden">
-                            <div class="progress-bar h-2 rounded-full bg-emerald-400" data-width="85%"></div>
+    
+                <!-- Illustrator -->
+                <div
+                    class="p-5 rounded-xl bg-gradient-to-br from-[#2e1a10] to-[#1a0e0e] shadow-md hover:shadow-orange-500/40 hover:scale-105 transition duration-300">
+                    <div class="flex flex-col">
+                        <img src="assets/skills/Illustrator_icon.png" alt="Illustrator" class="h-32 md:h-24 mb-4 mx-auto" />
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-semibold">Illustrator</h3>
+                            <span class="text-sm text-gray-300">3+ Years</span>
+                        </div>
+                        <p class="mt-2 text-sm text-white/90">Logo design, icons, vector art, and illustrations.</p>
+                        <div class="w-full mt-4">
+                            <div class="h-2 rounded-full bg-white/10 overflow-hidden">
+                                <div class="progress-bar h-2 rounded-full bg-emerald-400" data-width="85%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Figma -->
-            <div
-                class="p-5 rounded-xl bg-gradient-to-br from-[#2e1a10] to-[#1a0e0e] shadow-md hover:shadow-orange-500/40 hover:scale-105 transition duration-300">
-                <div class="flex flex-col">
-                    <img src="assets/skills/figma_logo.png" alt="Figma" class="h-32 md:h-24 mb-4 mx-auto" />
-                    <div class="flex items-center justify-between">
-                        <h3 class="text-lg font-semibold">Figma</h3>
-                        <span class="text-sm text-gray-300">2+ Years</span>
-                    </div>
-                    <p class="mt-2 text-sm text-white/90">Modern UI/UX design, prototyping, and mobile-first layouts.
-                    </p>
-                    <div class="w-full mt-4">
-                        <div class="h-2 rounded-full bg-white/10 overflow-hidden">
-                            <div class="progress-bar h-2 rounded-full bg-emerald-400" data-width="80%"></div>
+    
+                <!-- Figma -->
+                <div
+                    class="p-5 rounded-xl bg-gradient-to-br from-[#2e1a10] to-[#1a0e0e] shadow-md hover:shadow-orange-500/40 hover:scale-105 transition duration-300">
+                    <div class="flex flex-col">
+                        <img src="assets/skills/figma_logo.png" alt="Figma" class="h-32 md:h-24 mb-4 mx-auto" />
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-semibold">Figma</h3>
+                            <span class="text-sm text-gray-300">2+ Years</span>
+                        </div>
+                        <p class="mt-2 text-sm text-white/90">Modern UI/UX design, prototyping, and mobile-first layouts.
+                        </p>
+                        <div class="w-full mt-4">
+                            <div class="h-2 rounded-full bg-white/10 overflow-hidden">
+                                <div class="progress-bar h-2 rounded-full bg-emerald-400" data-width="80%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- UI/UX Design -->
-            <div
-                class="p-5 rounded-xl bg-gradient-to-br from-[#2e1a10] to-[#1a0e0e] shadow-md hover:shadow-orange-500/40 hover:scale-105 transition duration-300">
-                <div class="flex flex-col">
-                    <img src="assets/skills/ui-ux_logo.png" alt="UI/UX Design" class="w-32 md:w-32 mb-4 mx-auto" />
-                    <div class="flex items-center justify-between">
-                        <h3 class="text-lg font-semibold">UI/UX Design</h3>
-                        <span class="text-sm text-gray-300">3+ Years</span>
-                    </div>
-                    <p class="mt-2 text-sm text-white/90">Clean layouts, user flows, and usability-first wireframes.</p>
-                    <div class="w-full mt-4">
-                        <div class="h-2 rounded-full bg-white/10 overflow-hidden">
-                            <div class="progress-bar h-2 rounded-full bg-emerald-400" data-width="88%"></div>
+    
+                <!-- UI/UX Design -->
+                <div
+                    class="p-5 rounded-xl bg-gradient-to-br from-[#2e1a10] to-[#1a0e0e] shadow-md hover:shadow-orange-500/40 hover:scale-105 transition duration-300">
+                    <div class="flex flex-col">
+                        <img src="assets/skills/ui-ux_logo.png" alt="UI/UX Design" class="w-32 md:w-32 mb-4 mx-auto" />
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-semibold">UI/UX Design</h3>
+                            <span class="text-sm text-gray-300">3+ Years</span>
+                        </div>
+                        <p class="mt-2 text-sm text-white/90">Clean layouts, user flows, and usability-first wireframes.</p>
+                        <div class="w-full mt-4">
+                            <div class="h-2 rounded-full bg-white/10 overflow-hidden">
+                                <div class="progress-bar h-2 rounded-full bg-emerald-400" data-width="88%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- CapCut -->
-            <div
-                class="p-5 rounded-xl bg-gradient-to-br from-[#2e1a10] to-[#1a0e0e] shadow-md hover:shadow-orange-500/40 hover:scale-105 transition duration-300">
-                <div class="flex flex-col">
-                    <img src="assets/capcut.png" alt="CapCut" class="h-[4rem] mb-4 mx-auto" />
-                    <div class="flex items-center justify-between">
-                        <h3 class="text-lg font-semibold">CapCut</h3>
-                        <span class="text-sm text-gray-300">1+ Year</span>
-                    </div>
-                    <p class="mt-2 text-sm text-white/90">Simple video edits, cuts, and social media clips.</p>
-                    <div class="w-full mt-4">
-                        <div class="h-2 rounded-full bg-white/10 overflow-hidden">
-                            <div class="progress-bar h-2 rounded-full bg-emerald-400" data-width="60%"></div>
+    
+                <!-- CapCut -->
+                <div
+                    class="p-5 rounded-xl bg-gradient-to-br from-[#2e1a10] to-[#1a0e0e] shadow-md hover:shadow-orange-500/40 hover:scale-105 transition duration-300">
+                    <div class="flex flex-col">
+                        <img src="assets/capcut.png" alt="CapCut" class="h-[4rem] mb-4 mx-auto" />
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-semibold">CapCut</h3>
+                            <span class="text-sm text-gray-300">1+ Year</span>
+                        </div>
+                        <p class="mt-2 text-sm text-white/90">Simple video edits, cuts, and social media clips.</p>
+                        <div class="w-full mt-4">
+                            <div class="h-2 rounded-full bg-white/10 overflow-hidden">
+                                <div class="progress-bar h-2 rounded-full bg-emerald-400" data-width="60%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Lightroom -->
-            <div
-                class="p-5 rounded-xl bg-gradient-to-br from-[#2e1a10] to-[#1a0e0e] shadow-md hover:shadow-orange-500/40 hover:scale-105 transition duration-300">
-                <div class="flex flex-col">
-                    <img src="assets/lightroom.png" alt="Lightroom" class="h-[4rem] mb-4 mx-auto" />
-                    <div class="flex items-center justify-between">
-                        <h3 class="text-lg font-semibold">Lightroom</h3>
-                        <span class="text-sm text-gray-300">2+ Years</span>
-                    </div>
-                    <p class="mt-2 text-sm text-white/90">Photo color grading, presets, and batch edits.</p>
-                    <div class="w-full mt-4">
-                        <div class="h-2 rounded-full bg-white/10 overflow-hidden">
-                            <div class="progress-bar h-2 rounded-full bg-emerald-400" data-width="75%"></div>
+    
+                <!-- Lightroom -->
+                <div
+                    class="p-5 rounded-xl bg-gradient-to-br from-[#2e1a10] to-[#1a0e0e] shadow-md hover:shadow-orange-500/40 hover:scale-105 transition duration-300">
+                    <div class="flex flex-col">
+                        <img src="assets/lightroom.png" alt="Lightroom" class="h-[4rem] mb-4 mx-auto" />
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-semibold">Lightroom</h3>
+                            <span class="text-sm text-gray-300">2+ Years</span>
+                        </div>
+                        <p class="mt-2 text-sm text-white/90">Photo color grading, presets, and batch edits.</p>
+                        <div class="w-full mt-4">
+                            <div class="h-2 rounded-full bg-white/10 overflow-hidden">
+                                <div class="progress-bar h-2 rounded-full bg-emerald-400" data-width="75%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -986,22 +988,21 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             // -------- Progress Bar Animation on Scroll --------
-            const observer = new IntersectionObserver(
-                (entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const bar = entry.target;
-                            bar.style.width = bar.dataset.width;
-                            observer.unobserve(bar); // Animate only once
-                        }
-                    });
-                },
-                { threshold: 0.9 }
-            );
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const bar = entry.target;
+                        const finalWidth = bar.getAttribute("data-width") || "0%";
+                        bar.style.width = finalWidth;
+                        observer.unobserve(bar); // Animate only once
+                    }
+                });
+            }, {
+                threshold: 0.5 // Better balance across screen sizes
+            });
 
             document.querySelectorAll(".progress-bar").forEach(bar => {
-                // Initialize width to 0 for animation start
-                bar.style.width = "0";
+                bar.style.width = "0"; // Reset initially
                 observer.observe(bar);
             });
 
@@ -1023,8 +1024,8 @@
                     i++;
                     setTimeout(typeHello, 300);
                 } else {
-                    cursorHello.classList.add("hidden");
-                    cursorName.classList.remove("hidden");
+                    cursorHello?.classList.add("hidden");
+                    cursorName?.classList.remove("hidden");
                     setTimeout(typeName, 100);
                 }
             }
@@ -1037,7 +1038,6 @@
                 }
             }
 
-            // Start typing hello after page load
             typeHello();
 
             // -------- Mobile Menu Toggle --------
@@ -1045,7 +1045,7 @@
             const mobileMenu = document.getElementById("mobileMenu");
             let isOpen = false;
 
-            menuToggle.addEventListener("click", event => {
+            menuToggle?.addEventListener("click", event => {
                 event.stopPropagation();
                 isOpen = !isOpen;
 
@@ -1058,13 +1058,8 @@
                 }
             });
 
-            // Click outside menu closes it
             document.addEventListener("click", event => {
-                if (
-                    !mobileMenu.contains(event.target) &&
-                    !menuToggle.contains(event.target) &&
-                    isOpen
-                ) {
+                if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target) && isOpen) {
                     isOpen = false;
                     mobileMenu.classList.remove("opacity-100", "scale-100", "translate-y-0", "pointer-events-auto");
                     mobileMenu.classList.add("opacity-0", "scale-95", "-translate-y-3", "pointer-events-none");
@@ -1072,6 +1067,7 @@
             });
         });
     </script>
+
 </body>
 
 </html>
